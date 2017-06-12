@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class PUBLIC "program" "xmlprog.dtd">
+<class>
+  <name>MyClass</name>
+  <inherits-from/>
+  <implements-list>
+    <implements>java.awt.nointerface</implements>
+  </implements-list>
+  <package-name>org.xml.java.thingy</package-name>
+  <static-member-variables>
+    <member-variable>
+      <name>membervariable0</name>
+      <type>org.java.Integer</type>
+    </member-variable>
+  </static-member-variables>
+  <static-member-functions>
+    <member-function>
+      <name>initializeTheClass</name>
+      <type>uint32</type>
+      <parameter-list>
+        <name>initReallyTrueFalse</name>
+        <type>integer</type>
+      </parameter-list>
+      <statement-block>
+        <assignment>
+          <name>membervariable0 </name>
+          <the-assignment>15</the-assignment>
+        </assignment>
+        <function-call>
+          <name>org.java.awt.CreateWindow</name>
+          <call-list>
+            <value/>
+            <value/>
+            <value/>
+          </call-list>
+        </function-call>
+      </statement-block>
+    </member-function>
+  </static-member-functions>
+  <member-variables>
+    <member-variable/>
+  </member-variables>
+  <member-functions>
+    <member-function/>
+  </member-functions>
+</class>

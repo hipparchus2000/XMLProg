@@ -1,0 +1,54 @@
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+
+<!-- for inherit from, specify complete path including package name to parent class-->
+<!ELEMENT inherits-from (#PCDATA)>
+<!ELEMENT implements (#PCDATA)>
+<!ELEMENT implements-list (implements*)>
+
+<!-- this is a complete cop-out, in my original lost DTD I did assignment as XML parseable-->
+<!-- this should be completed again some time --> 
+<!ELEMENT the-assignment (#PCDATA)>
+<!ELEMENT assignment (name,the-assignment)>
+
+<!--name is fully qualified static class name, or local (static or non-static) instance name-->
+<!ELEMENT function-call (name,call-list)>
+<!ELEMENT call-list (value)*>      <!-- ditto about cop-out regarding unparsed stuff in value -->
+<!ELEMENT statement-block (assignment|function-call|conditional-statement-block|statement-block)*>
+
+<!-- this is a complete cop-out, in my original lost DTD I did condition as XML parseable-->
+<!-- this should be completed again some time -->
+<!ELEMENT condition (#PCDATA)>
+<!ELEMENT conditional-statement-block (condition,statement-block)>
+
+
+<!ELEMENT package-name (#PCDATA)>
+
+<!ELEMENT static-member-variables (member-variable*)>
+
+<!ELEMENT static-member-functions (member-function*)>
+
+<!-- type of variable is full path to a class name or a simple type -->
+<!ELEMENT member-variable (name, type)>
+
+<!ELEMENT member-variables (member-variable*)>
+
+<!ELEMENT parameter-list (name,type)*>
+
+<!-- type is type of function i.e. return type -->
+<!ELEMENT member-function (name,type,parameter-list,statement-block)>
+
+<!ELEMENT member-functions (member-function*)>
+
+
+<!ELEMENT class (name,inherits-from,implements-list,package-name,static-member-variables,static-member-functions,member-variables,member-functions)>
+<!-- virtual functions later  C++ can inherit from multiple but Java can't-->
+
+
+
+<!-- Later versions as original programming DTD, will have 0. FuncSpecs   1. Test vectors  2. Descriptions-javadoc stuff 
+3. ids for each step and each statement block for code auditing purposes ALSO public/nonpublic member vars and functions, and
+local variables-->
+
+
